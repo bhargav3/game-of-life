@@ -3,11 +3,15 @@ var lib,
 
 
 /**
- * Initialize the width, height and the matrix array
+ * Program bootstraps by calling input method
  */
 lib = function () {
     this.input();
 };
+
+/**
+ * Initializes height, width and the cell field matrix
+ */
 
 lib.prototype.init = function (height, width, cellField) {
     this.height = height;
@@ -20,6 +24,10 @@ lib.prototype.init = function (height, width, cellField) {
         heightIterator++;
     }
 };
+
+/**
+ * Loading the stdin file and parsing it
+ */
 
 lib.prototype.input = function () {
     var input = sget().split('\n'),
@@ -40,6 +48,8 @@ lib.prototype.input = function () {
         return 1;
     }
 
+    // Replacing dots and asterisks with boolean 1's and 0's
+
     while (i < height) {
         var str = input[i + 1];
         str = str.replace(/\*/g, 1);
@@ -53,9 +63,14 @@ lib.prototype.input = function () {
         i++;
     }
 
+    // Input method automatically initializes required game data
+
     this.init(height, width, cellField);
 };
 
+/**
+ * Computes and mutates the current cell field based on the preset conditions
+ */
 
 lib.prototype.computeNext = function () {
     for (var x = 0; x < this.height; x++) {
@@ -92,9 +107,17 @@ lib.prototype.computeNext = function () {
     this.cellField = this.tempField;
 };
 
+/**
+ * Method to print height and width
+ */
+
 lib.prototype.getDimensions = function () {
     console.log(this.height + ' ' + this.width);
 };
+
+/**
+ * Method to print the current cell field
+ */
 
 lib.prototype.getField = function () {
     for (var x = 0; x < this.cellField.length; x++) {
