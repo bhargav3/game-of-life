@@ -45,8 +45,8 @@ Game can be run by passing the input through a file
 ........
 ```
 
-- Where 4 is the height of the cell field and 8 is the width of the cell field
+- Where `4` is the height of the cell field and `8` is the width of the cell field
 
-- . or a DOT represents a dead cell
+- `.` or a DOT represents a dead cell
 
-- * or an asterisk represents a live cell
+- `*` or an asterisk represents a live cell
