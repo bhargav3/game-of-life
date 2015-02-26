@@ -1,5 +1,7 @@
 # Game of Life #
 
+[![Build Status](https://api.shippable.com/projects/54ef29d75ab6cc13528e7cea/badge?branchName=master)](https://app.shippable.com/projects/54ef29d75ab6cc13528e7cea/builds/latest)
+
 Program to calculate the next generation of Conway's game of life, given any starting position.
 You start with a two dimensional grid of cells, where each cell is either alive or dead. The grid is finite, 
 and no life can exist off the edges. When calculating the next generation of the grid, follow these four rules:
