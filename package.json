@@ -26,6 +26,8 @@
         "sget": "*"
     },
     "devDependencies": {
-        "jshint": "~2.4.1"
+        "jshint": "~2.4.1",
+        "grunt-contrib-jshint": "*",
+        "grunt": "*"
     }
 }
