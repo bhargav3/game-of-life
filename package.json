@@ -2,20 +2,30 @@
     "name": "game-of-life",
     "description": "Program to calculate the next generation of Conway's game of life",
     "version": "0.0.1",
+
     "keywords": [
         "RecruiterBox",
         "Game of Life"
     ],
+
     "author": [
         {
             "name": "N Bhargav",
             "email": "bhargav3@gmail.com"
         }
     ],
-    "repositories": [
+
+    "repository": [
         {
             "type": "git",
             "url": "https://bitbucket.org/nbhargav/game-of-life"
         }
-    ]
+    ],
+
+    "dependencies": {
+        "sget": "*"
+    },
+    "devDependencies": {
+        "jshint": "~2.4.1"
+    }
 }
