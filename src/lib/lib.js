@@ -24,7 +24,7 @@ lib.prototype.init = function (height, width, cellField) {
 lib.prototype.input = function () {
     var input = sget().split('\n'),
         dimensions = input[0].split(' '),
-        cellField = new Array(),
+        cellField = [],
         i = 0;
 
     if (dimensions.length !== 2) {
@@ -63,11 +63,11 @@ lib.prototype.computeNext = function () {
             var liveNeighbors = 0;
             for (var dx = -1; dx <= 1; dx++) {
                 for (var dy = -1; dy <= 1; dy++) {
-                    if (dx == 0 && dy == 0) {
+                    if (dx === 0 && dy === 0) {
                     }
-                    else if (typeof this.cellField[x + dx] !== 'undefined'
-                        && typeof this.cellField[x + dx][y + dy] !== 'undefined'
-                        && this.cellField[x + dx][y + dy]) {
+                    else if (typeof this.cellField[x + dx] !== 'undefined' &&
+                        typeof this.cellField[x + dx][y + dy] !== 'undefined' &&
+                        this.cellField[x + dx][y + dy]) {
                         liveNeighbors++;
                     }
                 }
